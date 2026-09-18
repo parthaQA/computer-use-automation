@@ -1,0 +1,59 @@
+{
+  "schema_version": "capability.v1",
+  "id": "lookup_savings_balance",
+  "version": "1",
+  "name": "Look up member savings balance",
+  "description": "Sign-on assumed. Search membership by ID and read Regular Shares available balance on MEM02.",
+  "vendor_app": "northstar.memsys",
+  "surface_kind": "web",
+  "risk_class": "read",
+  "params": [
+    {
+      "name": "member_id",
+      "type": "string",
+      "required": true,
+      "pii_class": "identifier",
+      "description": "5-digit membership number"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "savings_balance",
+      "type": "string",
+      "description": "Available savings as displayed on MEM02",
+      "extractor": {
+        "kind": "text",
+        "value": "Current savings balance"
+      }
+    }
+  ],
+  "steps": [
+    {
+      "id": "fill_member_id",
+      "intent": "Enter membership number",
+      "action": "type",
+      "target": [
+        { "kind": "name_attr", "value": "MEMID" }
+      ],
+      "input_binding": "$params.member_id",
+      "on_error": "fail"
+    },
+    {
+      "id": "search",
+      "intent": "Submit Member Inquiry",
+      "action": "click",
+      "target": [
+        { "kind": "role_name", "value": "button", "name": "Search" }
+      ],
+      "postconditions": [],
+      "on_error": "fail"
+    }
+  ],
+  "success_checkpoint": {
+    "kind": "screen_id",
+    "value": "MEM02"
+  },
+  "policy_ref": "default",
+  "overlays": [],
+  "lineage": {}
+}

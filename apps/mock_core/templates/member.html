@@ -1,0 +1,57 @@
+{% extends "inner.html" %}
+{% block body %}
+<br>
+<center>
+<table width="100%" cellpadding="0" cellspacing="0" border="1" bordercolor="#003366" bgcolor="#e8eee8">
+  <tr bgcolor="#003366">
+    <td colspan="2"><font color="#ffffff" face="Tahoma" size="2"><b>&nbsp;Membership {{ mem }}</b></font></td>
+  </tr>
+  <tr>
+    <td>
+      <table width="100%" cellpadding="4" cellspacing="0" border="0">
+        <tr>
+          <td>Name:</td>
+          <td>{{ member.name }}</td>
+          <td>Status:</td>
+          <td>{{ member.status }}</td>
+        </tr>
+        <tr>
+          <td>Branch:</td>
+          <td colspan="3">{{ member.branch }}</td>
+        </tr>
+      </table>
+      <table width="100%" cellpadding="3" cellspacing="0" border="1" bordercolor="#8aa08a">
+        <tr bgcolor="#d0d8d0">
+          <td><b>Share</b></td>
+          <td><b>Type</b></td>
+          <td align="right"><b>Ledger</b></td>
+          <td align="right"><b>Available</b></td>
+        </tr>
+        {% for s in member.shares %}
+        <tr>
+          <td>{{ s.id }}</td>
+          <td>{{ s.type }}</td>
+          <td align="right">{{ money(s.bal) }}</td>
+          <td align="right">{{ money(s.avail) }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+      {% if savings %}
+      <p>
+        <font size="2">
+          Current savings balance ({{ savings.id }} {{ savings.type }}):
+          <b>{{ money(savings.avail) }}</b>
+        </font>
+      </p>
+      {% endif %}
+      <form method="get" action="/main/subacct">
+        <input type="hidden" name="mem" value="{{ mem }}">
+        <input type="submit" value="Open Sub-Account">
+        &nbsp;
+        <a href="/main/inquiry">New Inquiry</a>
+      </form>
+    </td>
+  </tr>
+</table>
+</center>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "inner.html" %}
+{% block body %}
+<br>
+<center>
+<table width="100%" cellpadding="0" cellspacing="0" border="1" bordercolor="#003366" bgcolor="#e8eee8">
+  <tr bgcolor="#003366">
+    <td><font color="#ffffff" face="Tahoma" size="2"><b>&nbsp;Member Inquiry</b></font></td>
+  </tr>
+  <tr>
+    <td>
+      <table width="100%" cellpadding="8" cellspacing="0" border="0">
+        <tr>
+          <td>
+            <font size="2">Look up a membership by 5-digit member ID. Do not use SSN.</font>
+            {% if err == "REQUIRED" %}
+            <p class="err">Member ID is required — enter a 5 digit membership number.</p>
+            {% elif err == "NUMERIC" %}
+            <p class="err">Member ID must be numeric.</p>
+            {% elif err == "NOTFOUND" %}
+            <p class="err">Record not found for membership {{ mem }}.</p>
+            {% endif %}
+            <form method="post" action="/main/inquiry">
+              <input type="hidden" name="SCRN" value="INQ01">
+              <table cellpadding="4" cellspacing="0" border="0">
+                <tr>
+                  <td>Member ID:</td>
+                  <td><input type="text" name="MEMID" size="12" maxlength="12" value="{{ mem or '' }}"></td>
+                  <td><input type="submit" value="Search"></td>
+                </tr>
+              </table>
+            </form>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</center>
+{% endblock %}

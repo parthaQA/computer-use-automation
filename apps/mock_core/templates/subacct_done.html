@@ -1,0 +1,25 @@
+{% extends "inner.html" %}
+{% block body %}
+<br>
+<center>
+<table width="100%" cellpadding="0" cellspacing="0" border="1" bordercolor="#006600" bgcolor="#e8eee8">
+  <tr bgcolor="#006600">
+    <td><font color="#ffffff" face="Tahoma" size="2"><b>&nbsp;Posting complete</b></font></td>
+  </tr>
+  <tr>
+    <td>
+      <table width="100%" cellpadding="8" cellspacing="0" border="0">
+        <tr>
+          <td>
+            <p class="ok">Share {{ posted.share_id }} opened for membership {{ mem }}.</p>
+            <p>Confirmation number: <b>{{ posted.conf }}</b></p>
+            <p>Product: {{ posted.PROD }} {{ posted.prod_name }} &nbsp; Opening deposit: {{ money(posted.amt) }}</p>
+            <p><a href="/main/member?mem={{ mem }}">Return to membership</a> &nbsp;|&nbsp; <a href="/main/inquiry">New Inquiry</a></p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</center>
+{% endblock %}

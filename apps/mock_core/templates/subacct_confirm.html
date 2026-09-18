@@ -1,0 +1,52 @@
+{% extends "inner.html" %}
+{% block body %}
+<br>
+<center>
+<table width="100%" cellpadding="0" cellspacing="0" border="1" bordercolor="#003366" bgcolor="#e8eee8">
+  <tr bgcolor="#003366">
+    <td><font color="#ffffff" face="Tahoma" size="2"><b>&nbsp;Confirm New Share — Review before posting</b></font></td>
+  </tr>
+  <tr>
+    <td>
+      <table width="100%" cellpadding="8" cellspacing="0" border="0">
+        <tr>
+          <td>
+            <p>This posting is irreversible. Verify the confirmation screen before you continue.</p>
+            <table cellpadding="4" cellspacing="0" border="1" bordercolor="#8aa08a" width="100%">
+              <tr>
+                <td>Membership</td>
+                <td>{{ mem }} {{ member.name }}</td>
+              </tr>
+              <tr>
+                <td>Product</td>
+                <td>{{ pending.PROD }} {{ pending.prod_name }}</td>
+              </tr>
+              <tr>
+                <td>Nickname</td>
+                <td>{{ pending.NICK or "(none)" }}</td>
+              </tr>
+              <tr>
+                <td>Opening deposit</td>
+                <td>{{ money(pending.amt) }}</td>
+              </tr>
+              <tr>
+                <td>Source share</td>
+                <td>{{ pending.SRC }} {{ pending.src_type }}</td>
+              </tr>
+            </table>
+            <form method="post" action="/main/subacct/confirm">
+              <input type="hidden" name="MEMID" value="{{ mem }}">
+              <p>
+                <input type="submit" name="ACT" value="Post New Share">
+                &nbsp;
+                <input type="submit" name="ACT" value="Cancel">
+              </p>
+            </form>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</center>
+{% endblock %}

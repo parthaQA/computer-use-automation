@@ -1,0 +1,5 @@
+{
+  "allowed_hosts": ["127.0.0.1", "localhost"],
+  "allowed_actions": ["click", "type", "select", "extract", "navigate", "dismiss", "wait"],
+  "irreversible_requires_human": true
+}

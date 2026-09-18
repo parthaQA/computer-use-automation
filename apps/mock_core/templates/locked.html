@@ -1,0 +1,18 @@
+{% extends "inner.html" %}
+{% block body %}
+<br>
+<center>
+<table width="520" cellpadding="8" cellspacing="0" border="1" bordercolor="#996600" bgcolor="#fff3d0">
+  <tr bgcolor="#996600">
+    <td><font color="#ffffff" face="Tahoma" size="2"><b>Membership Locked</b></font></td>
+  </tr>
+  <tr>
+    <td>
+      <p class="err">Membership {{ mem }} is in locked status. No maintenance permitted.</p>
+      <p>Name on file: {{ member.name }}</p>
+      <p><a href="/main/inquiry">Return to Member Inquiry</a></p>
+    </td>
+  </tr>
+</table>
+</center>
+{% endblock %}

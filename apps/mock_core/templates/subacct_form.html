@@ -1,0 +1,72 @@
+{% extends "inner.html" %}
+{% block body %}
+<br>
+<center>
+<table width="100%" cellpadding="0" cellspacing="0" border="1" bordercolor="#003366" bgcolor="#e8eee8">
+  <tr bgcolor="#003366">
+    <td><font color="#ffffff" face="Tahoma" size="2"><b>&nbsp;Open Sub-Account — {{ mem }} {{ member.name }}</b></font></td>
+  </tr>
+  <tr>
+    <td>
+      <table width="100%" cellpadding="8" cellspacing="0" border="0">
+        <tr>
+          <td>
+            <font size="2">New share will be posted to this membership. Source funds come from an existing share.</font>
+            {% if err == "PROD" %}
+            <p class="err">Product type is required.</p>
+            {% elif err == "AMT" %}
+            <p class="err">Opening deposit must be a numeric amount 0 or greater.</p>
+            {% elif err == "SRC" %}
+            <p class="err">Source share is invalid.</p>
+            {% elif err == "NSF" %}
+            <p class="err">Insufficient available balance in source share.</p>
+            {% endif %}
+            <form method="post" action="/main/subacct">
+              <input type="hidden" name="MEMID" value="{{ mem }}">
+              <table cellpadding="4" cellspacing="0" border="0">
+                <tr>
+                  <td>Product type:</td>
+                  <td>
+                    <select name="PROD">
+                      <option value="">-- select --</option>
+                      {% for code, label in products.items() %}
+                      <option value="{{ code }}" {% if form.get("PROD") == code %}selected{% endif %}>{{ code }} {{ label }}</option>
+                      {% endfor %}
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Account nickname:</td>
+                  <td><input type="text" name="NICK" size="20" maxlength="20" value="{{ form.get('NICK', '') }}"></td>
+                </tr>
+                <tr>
+                  <td>Opening deposit:</td>
+                  <td><input type="text" name="AMT" size="12" value="{{ form.get('AMT', '') }}"></td>
+                </tr>
+                <tr>
+                  <td>Source share:</td>
+                  <td>
+                    <select name="SRC">
+                      {% for s in member.shares %}
+                      <option value="{{ s.id }}" {% if form.get("SRC", "S00") == s.id %}selected{% endif %}>{{ s.id }} {{ s.type }} ({{ money(s.avail) }} avail)</option>
+                      {% endfor %}
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <input type="submit" value="Continue">
+                    &nbsp; <a href="/main/member?mem={{ mem }}">Cancel</a>
+                  </td>
+                </tr>
+              </table>
+            </form>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</center>
+{% endblock %}

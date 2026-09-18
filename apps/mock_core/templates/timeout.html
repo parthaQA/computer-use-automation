@@ -1,0 +1,21 @@
+{% extends "inner.html" %}
+{% block body %}
+<br>
+<center>
+<table width="480" cellpadding="8" cellspacing="0" border="1" bordercolor="#990000" bgcolor="#ffffcc">
+  <tr bgcolor="#990000">
+    <td><font color="#ffffff" face="Tahoma" size="2"><b>SESSION TIMEOUT</b></font></td>
+  </tr>
+  <tr>
+    <td>
+      <p>Your MEMSYS session has expired or is about to expire due to inactivity.</p>
+      <p>Click Continue Session to resume this live session, or Sign On again.</p>
+      <form method="get" action="/main/continue-session">
+        <input type="submit" value="Continue Session">
+      </form>
+      <p><a href="/signoff" target="_top">Re-login</a></p>
+    </td>
+  </tr>
+</table>
+</center>
+{% endblock %}
