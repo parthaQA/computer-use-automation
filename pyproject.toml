@@ -7,16 +7,18 @@ name = "cua"
 version = "0.1.0"
 description = "Discover-once / replay-many computer-use automation for legacy back-office UIs"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 authors = [{ name = "CUA" }]
 dependencies = [
   "pydantic>=2.9",
   "pydantic-settings>=2.5",
+  "python-dotenv>=1.0",
+  "playwright>=1.48",
+  "anthropic>=0.40",
+  "browser-use>=0.13",
 ]
 
 [project.optional-dependencies]
-web = ["playwright>=1.48"]
-llm = ["anthropic>=0.40"]
 mock = [
   "fastapi>=0.115",
   "uvicorn>=0.32",
@@ -25,9 +27,6 @@ mock = [
   "itsdangerous>=2.2",
 ]
 dev = ["pytest>=8.0", "httpx>=0.27"]
-
-[project.scripts]
-cua = "cua.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

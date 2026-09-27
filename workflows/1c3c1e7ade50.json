@@ -1,0 +1,85 @@
+{
+  "title": "Open base_url. Enter operator id JLEE. Enter password {password}. Click Sign On. Open base_url/main/inquiry?inject=slow. Enter member id {member_id}. Click Search.",
+  "steps": [
+    {
+      "type": "navigate",
+      "url": "{base_url}/signon"
+    },
+    {
+      "type": "change",
+      "selectors": [
+        [
+          "input[name='OPR'][type='text']"
+        ],
+        [
+          "xpath//html/body/center/table/tbody/tr[2]/td/form/table/tbody/tr[1]/td[2]/input"
+        ]
+      ],
+      "value": "JLEE"
+    },
+    {
+      "type": "change",
+      "selectors": [
+        [
+          "input[name='PWD'][type='password']"
+        ],
+        [
+          "xpath//html/body/center/table/tbody/tr[2]/td/form/table/tbody/tr[2]/td[2]/input"
+        ]
+      ],
+      "value": "<secret>x_password</secret>"
+    },
+    {
+      "type": "click",
+      "selectors": [
+        [
+          "input[type='submit'][value='Sign On']"
+        ],
+        [
+          "xpath//html/body/center/table/tbody/tr[2]/td/form/table/tbody/tr[3]/td[2]/input"
+        ],
+        [
+          "text/Sign On"
+        ]
+      ],
+      "assertText": "Sign On"
+    },
+    {
+      "type": "navigate",
+      "url": "{base_url}/main/inquiry?inject=slow"
+    },
+    {
+      "type": "change",
+      "selectors": [
+        [
+          "input[name='MEMID'][type='text']"
+        ],
+        [
+          "xpath//html/body/center/table/tbody/tr[2]/td/table/tbody/tr/td/form/table/tbody/tr/td[2]/input"
+        ]
+      ],
+      "value": "{member_id}"
+    },
+    {
+      "type": "click",
+      "selectors": [
+        [
+          "input[type='submit'][value='Search']"
+        ],
+        [
+          "xpath//html/body/center/table/tbody/tr[2]/td/table/tbody/tr/td/form/table/tbody/tr/td[3]/input"
+        ],
+        [
+          "text/Search"
+        ]
+      ],
+      "assertText": "Search"
+    }
+  ],
+  "success": {
+    "description": "Sign on and search for a member.",
+    "checks": [],
+    "must_see": [],
+    "must_not_see": []
+  }
+}

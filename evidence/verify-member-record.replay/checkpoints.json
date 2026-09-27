@@ -1,0 +1,78 @@
+{
+  "screen_id": "INQ01",
+  "observed": {
+    "screen_id": "INQ01",
+    "message": "Record not found for membership 99999.",
+    "member_found": "false"
+  },
+  "items": [
+    {
+      "n": 1,
+      "step": "navigate:{base_url}/signon",
+      "screen_id": "SON01",
+      "kind": "clear",
+      "ok": true,
+      "detail": "",
+      "observed": {
+        "screen_id": "SON01"
+      }
+    },
+    {
+      "n": 2,
+      "step": "change:{operator}",
+      "screen_id": "SON01",
+      "kind": "clear",
+      "ok": true,
+      "detail": "",
+      "observed": {
+        "screen_id": "SON01"
+      }
+    },
+    {
+      "n": 3,
+      "step": "change:<secret>x_password</secret>",
+      "screen_id": "SON01",
+      "kind": "clear",
+      "ok": true,
+      "detail": "",
+      "observed": {
+        "screen_id": "SON01"
+      }
+    },
+    {
+      "n": 4,
+      "step": "click:Sign On",
+      "screen_id": "INQ01",
+      "kind": "clear",
+      "ok": true,
+      "detail": "",
+      "observed": {
+        "screen_id": "INQ01"
+      }
+    },
+    {
+      "n": 5,
+      "step": "change:{member_id}",
+      "screen_id": "INQ01",
+      "kind": "clear",
+      "ok": true,
+      "detail": "",
+      "observed": {
+        "screen_id": "INQ01"
+      }
+    },
+    {
+      "n": 6,
+      "step": "click:Search",
+      "screen_id": "INQ01",
+      "kind": "business",
+      "ok": true,
+      "detail": "Record not found for membership 99999.",
+      "observed": {
+        "screen_id": "INQ01",
+        "message": "Record not found for membership 99999.",
+        "member_found": "false"
+      }
+    }
+  ]
+}

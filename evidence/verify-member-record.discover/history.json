@@ -1,0 +1,20 @@
+{
+  "steps": 4,
+  "success": true,
+  "final": "{\"outcome\": \"not_found\", \"detail\": \"Signed on with operator x_operator, navigated to Member Inquiry (INQ01), entered member ID 99999, clicked Search. The page displayed message: 'Record not found for membership 99999.' No unexpected popups, overlays, or sub-account approval dialogs appeared during the process.\", \"observed\": {\"screen\": \"INQ01 Member Inquiry\", \"member_id_entered\": \"99999\", \"result_message\": \"Record not found for membership 99999.\", \"sub_account_popup_appeared\": \"no\"}, \"screen_id\": \"INQ01\", \"outcome_code\": \"NOT_FOUND\", \"step\": \"search_member_id\", \"expected\": null}",
+  "urls": [
+    "http://127.0.0.1:8000/signon",
+    "http://127.0.0.1:8000/signon",
+    "http://127.0.0.1:8000/console",
+    "http://127.0.0.1:8000/console"
+  ],
+  "actions": [
+    "navigate",
+    "input",
+    "input",
+    "click",
+    "input",
+    "click",
+    "done"
+  ]
+}

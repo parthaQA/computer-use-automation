@@ -1,0 +1,10 @@
+{
+  "lab": {
+    "url": "http://127.0.0.1:8000",
+    "app": "desktop:memsys"
+  },
+  "cu-a": {
+    "url": "https://memsys.cu-a.test",
+    "app": "desktop:memsys-cu-a"
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "title": "Open base_url. Enter operator id JLEE. Enter password {password}. Click Sign On. Enter member id {member_id}. Click Search. Click Open Sub-Account. Select product type 02 Secondary Shares. Set opening deposit 99999. Leave source share S00. Click Continue.",
+  "steps": [
+    {
+      "type": "navigate",
+      "url": "{base_url}/signon"
+    },
+    {
+      "type": "change",
+      "selectors": [
+        [
+          "input[name='OPR'][type='text']"
+        ],
+        [
+          "xpath//html/body/center/table/tbody/tr[2]/td/form/table/tbody/tr[1]/td[2]/input"
+        ]
+      ],
+      "value": "JLEE"
+    },
+    {
+      "type": "change",
+      "selectors": [
+        [
+          "input[name='PWD'][type='password']"
+        ],
+        [
+          "xpath//html/body/center/table/tbody/tr[2]/td/form/table/tbody/tr[2]/td[2]/input"
+        ]
+      ],
+      "value": "<secret>x_password</secret>"
+    },
+    {
+      "type": "click",
+      "selectors": [
+        [
+          "input[type='submit'][value='Sign On']"
+        ],
+        [
+          "xpath//html/body/center/table/tbody/tr[2]/td/form/table/tbody/tr[3]/td[2]/input"
+        ],
+        [
+          "text/Sign On"
+        ]
+      ],
+      "assertText": "Sign On"
+    },
+    {
+      "type": "change",
+      "selectors": [
+        [
+          "input[name='MEMID'][type='text']"
+        ],
+        [
+          "xpath//html/body/center/table/tbody/tr[2]/td/table/tbody/tr/td/form/table/tbody/tr/td[2]/input"
+        ]
+      ],
+      "value": "{member_id}"
+    },
+    {
+      "type": "click",
+      "selectors": [
+        [
+          "input[type='submit'][value='Search']"
+        ],
+        [
+          "xpath//html/body/center/table/tbody/tr[2]/td/table/tbody/tr/td/form/table/tbody/tr/td[3]/input"
+        ],
+        [
+          "text/Search"
+        ]
+      ],
+      "assertText": "Search"
+    },
+    {
+      "type": "click",
+      "selectors": [
+        [
+          "input[type='submit'][value='Open Sub-Account']"
+        ],
+        [
+          "xpath//html/body/center/table/tbody/tr[2]/td/form/input[2]"
+        ],
+        [
+          "text/Open Sub-Account"
+        ]
+      ],
+      "assertText": "Open Sub-Account"
+    },
+    {
+      "type": "change",
+      "selectors": [
+        [
+          "select[name='PROD']"
+        ],
+        [
+          "xpath//html/body/center/table/tbody/tr[2]/td/table/tbody/tr/td/form/table/tbody/tr[1]/td[2]/select"
+        ]
+      ],
+      "value": "02 Secondary Shares"
+    },
+    {
+      "type": "change",
+      "selectors": [
+        [
+          "input[name='AMT'][type='text']"
+        ],
+        [
+          "xpath//html/body/center/table/tbody/tr[2]/td/table/tbody/tr/td/form/table/tbody/tr[3]/td[2]/input"
+        ]
+      ],
+      "value": "99999"
+    },
+    {
+      "type": "click",
+      "selectors": [
+        [
+          "input[name='ACT'][type='submit'][value='Continue']"
+        ],
+        [
+          "xpath//html/body/center/table/tbody/tr[2]/td/table/tbody/tr/td/form/table/tbody/tr[5]/td[2]/input"
+        ],
+        [
+          "text/Continue"
+        ]
+      ],
+      "assertText": "Continue"
+    }
+  ],
+  "success": {
+    "description": "Open a sub-account with product type 02 Secondary Shares, opening deposit 99999, and source share S00.",
+    "checks": [],
+    "must_see": [],
+    "must_not_see": []
+  }
+}

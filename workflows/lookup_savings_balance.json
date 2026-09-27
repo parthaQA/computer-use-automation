@@ -1,0 +1,114 @@
+{
+  "schema_version": "capability.v1",
+  "id": "lookup_savings_balance",
+  "version": 1,
+  "title": "MEMSYS Savings Balance Lookup",
+  "surface": "web",
+  "app": "memsys",
+  "vendor": "memsys",
+  "inputs": [
+    {
+      "name": "member_id",
+      "type": "string",
+      "required": true,
+      "secret": false,
+      "description": "Membership number to look up"
+    },
+    {
+      "name": "password",
+      "type": "string",
+      "required": true,
+      "secret": true,
+      "description": "Operator password from the environment; not stored in the artifact"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "savings_balance",
+      "type": "string",
+      "required": true,
+      "secret": false,
+      "description": "Current savings balance as shown on the page"
+    },
+    {
+      "name": "member_name",
+      "type": "string",
+      "required": false,
+      "secret": false,
+      "description": "Member name as shown on the page"
+    },
+    {
+      "name": "screen_id",
+      "type": "string",
+      "required": false,
+      "secret": false,
+      "description": "MEMSYS screen code at the end"
+    }
+  ],
+  "success": {
+    "description": "Member inquiry shows the savings balance",
+    "must_see": ["Current savings balance"],
+    "must_not_see": ["Record not found", "does not have SERVICING rights", "is in locked status"],
+    "screen_id": "MEM02"
+  },
+  "steps": [
+    {
+      "type": "navigate",
+      "url": "{base_url}/signon",
+      "desktop_url": "{app}",
+      "how": "open this URL"
+    },
+    {
+      "type": "change",
+      "selectors": [
+        ["input[name='OPR'][type='text']"],
+        ["xpath//html/body/center/table/tbody/tr[2]/td/form/table/tbody/tr[1]/td[2]/input"],
+        ["automationId/OPR"]
+      ],
+      "value": "{operator}",
+      "how": "form name then xpath then desktop name"
+    },
+    {
+      "type": "change",
+      "selectors": [
+        ["input[name='PWD'][type='password']"],
+        ["xpath//html/body/center/table/tbody/tr[2]/td/form/table/tbody/tr[2]/td[2]/input"],
+        ["automationId/PWD"]
+      ],
+      "value": "{password}",
+      "how": "form name then xpath then desktop name"
+    },
+    {
+      "type": "click",
+      "selectors": [
+        ["input[type='submit'][value='Sign On']"],
+        ["xpath//html/body/center/table/tbody/tr[2]/td/form/table/tbody/tr[3]/td[2]/input"],
+        ["text/Sign On"],
+        ["name/Sign On"]
+      ],
+      "assertText": "Sign On",
+      "how": "css then xpath then visible text then desktop name"
+    },
+    {
+      "type": "change",
+      "selectors": [
+        ["input[name='MEMID'][type='text']"],
+        ["xpath//html/body/center/table/tbody/tr[2]/td/table/tbody/tr/td/form/table/tbody/tr/td[2]/input"],
+        ["automationId/MEMID"]
+      ],
+      "value": "{member_id}",
+      "how": "form name then xpath then desktop name"
+    },
+    {
+      "type": "click",
+      "selectors": [
+        ["input[type='submit'][value='Search']"],
+        ["xpath//html/body/center/table/tbody/tr[2]/td/table/tbody/tr/td/form/table/tbody/tr/td[3]/input"],
+        ["text/Search"],
+        ["name/Search"]
+      ],
+      "assertText": "Search",
+      "how": "css then xpath then visible text then desktop name"
+    }
+  ]
+}

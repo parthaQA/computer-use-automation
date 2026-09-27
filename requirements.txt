@@ -1,0 +1,6 @@
+pydantic>=2.9
+pydantic-settings>=2.5
+python-dotenv>=1.0
+playwright>=1.48
+anthropic>=0.40
+browser-use>=0.13

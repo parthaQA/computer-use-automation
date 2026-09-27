@@ -1,0 +1,74 @@
+{
+  "recordings": [
+    {
+      "prompt": "open base_url click on sign on button. search member id 12345 and click on search button",
+      "rewritten": "Open base_url. Enter operator id {operator}. Enter password {password}. Click Sign On. Enter member id {member_id}. Click Search.",
+      "file": "lookup_savings_balance.json"
+    },
+    {
+      "prompt": "open base_url click on sign on button. search member id 12345 and click on search button, click on open sub-account and verify sub-account page has opened",
+      "rewritten": "Open base_url. Enter operator id {operator}. Enter password {password}. Click Sign On. Enter member id {member_id}. Click Search. Click Open Sub-Account. Verify the sub-account page opened.",
+      "file": "c0a2d326fcc8.json"
+    },
+    {
+      "prompt": "open base_url click on sign on button. search member id 12345 and click on search button, click on open sub-account and verify sub-account page has opened, click on cancel button, click on sign off to logout",
+      "rewritten": "Open base_url. Enter operator id {operator}. Enter password {password}. Click Sign On. Enter member id {member_id}. Click Search. Click Open Sub-Account. Verify the sub-account page opened. Click Cancel. Click Sign Off.",
+      "file": "4d31e9db34ca.json"
+    },
+    {
+      "prompt": "open base_url click on sign on button. search member id 12345 and click on search button. click Open Sub-Account. select product type 02 Secondary Shares. set opening deposit 25.00. leave source share S00. click Continue.. on the confirmation screen click Post New Share. verify the confirmation number is shown",
+      "rewritten": "Open base_url. Enter operator id {operator}. Enter password {password}. Click Sign On. Enter member id {member_id}. Click Search. Click Open Sub-Account. Select product type 02 Secondary Shares. Set opening deposit 25.00. Leave source share S00. Click Continue. Click Post New Share. Verify the confirmation number is shown.",
+      "file": "0c70f5fa6f27.json"
+    },
+    {
+      "prompt": "open base_url click on sign on button. search member id 12345 and click on search button. click Open Sub-Account. select product type 02 Secondary Shares. set opening deposit 25.00. leave source share S00. click Continue.. on the confirmation screen click Post New Share. verify the confirmation number is shown",
+      "rewritten": "Open base_url. Enter operator id {operator}. Enter password {password}. Click Sign On. Enter member id {member_id}. Click Search. Click Open Sub-Account. Select product type 02 Secondary Shares. Set opening deposit 25.00. Leave source share S00. Click Continue. Click Post New Share.",
+      "file": "a41f565b2b85.json"
+    },
+    {
+      "prompt": "open base_url click on sign on button. search member id 12345 and click on search button. click Open Sub-Account. select product type 02 Secondary Shares. set opening deposit 99999. leave source share S00. click Continue.",
+      "rewritten": "Open base_url. Enter operator id {operator}. Enter password {password}. Click Sign On. Enter member id {member_id}. Click Search. Click Open Sub-Account. Select product type 02 Secondary Shares. Set opening deposit 99999. Leave source share S00. Click Continue.",
+      "file": "7019f1854f91.json"
+    },
+    {
+      "prompt": "open base_url click on sign on button. open base_url/main/inquiry?inject=timeout then search member id 12345 and click on search button",
+      "rewritten": "Open base_url. Enter operator id {operator}. Enter password {password}. Click Sign On. Open base_url/main/inquiry?inject=timeout. Enter member id {member_id}. Click Search.",
+      "file": "b12107e92d9e.json"
+    },
+    {
+      "prompt": "open base_url click on sign on button. open base_url/main/inquiry?inject=dialog then search member id 12345 and click on search button",
+      "rewritten": "Open base_url. Enter operator id {operator}. Enter password {password}. Click Sign On. Open base_url/main/inquiry?inject=dialog. Enter member id {member_id}. Click Search.",
+      "file": "cb1748358957.json"
+    },
+    {
+      "prompt": "open base_url click on sign on button. open base_url/main/inquiry?inject=slow then search member id 12345 and click on search button",
+      "rewritten": "Open base_url. Enter operator id {operator}. Enter password {password}. Click Sign On. Open base_url/main/inquiry?inject=slow. Enter member id {member_id}. Click Search.",
+      "file": "1c3c1e7ade50.json"
+    },
+    {
+      "prompt": "open base_url",
+      "rewritten": "Open base_url.",
+      "file": "fff5d144ca95.json"
+    },
+    {
+      "prompt": "open base_url click on sign on button",
+      "rewritten": "Open base_url. Enter operator id {operator}. Enter password {password}. Click Sign On.",
+      "file": "2f73e373abe2.json"
+    },
+    {
+      "prompt": "open base_url click on sign on button. enter member id 12345",
+      "rewritten": "Open base_url. Enter operator id {operator}. Enter password {password}. Click Sign On. Enter member id {member_id}.",
+      "file": "3994e010a301.json"
+    },
+    {
+      "prompt": "open base_url, enter operator id and password, click on sign on button. search member id 99999 and click on search button. verify the member record",
+      "rewritten": "Open base_url. Enter operator id {operator} {operator}. Enter password {password}. Click Sign On. Enter member id {member_id}. Click Search. Verify the member record.",
+      "file": "3fea6845d296.json"
+    },
+    {
+      "prompt": "open base_url, enter operator id and password, click on sign on button. search member id 99999 and click on search button. verify the member record",
+      "rewritten": "Open base_url. Enter operator id {operator} {operator}. Enter password {password}. Click Sign On. Enter member id {member_id}. Click Search.",
+      "file": "87e4872a1dd3.json"
+    }
+  ]
+}

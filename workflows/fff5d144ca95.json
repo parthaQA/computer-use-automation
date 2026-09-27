@@ -1,0 +1,29 @@
+{
+  "schema_version": "capability.v1",
+  "id": "fff5d144ca95",
+  "version": 1,
+  "title": "Open base_url.",
+  "inputs": [],
+  "outputs": [
+    {
+      "name": "screen_id",
+      "type": "string",
+      "required": false,
+      "secret": false,
+      "description": "MEMSYS screen code at the end"
+    }
+  ],
+  "success": {
+    "description": "",
+    "checks": [],
+    "must_see": [],
+    "must_not_see": []
+  },
+  "steps": [
+    {
+      "type": "navigate",
+      "url": "{base_url}/signon",
+      "how": "open this URL"
+    }
+  ]
+}

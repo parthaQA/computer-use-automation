@@ -56,11 +56,33 @@
                 <tr>
                   <td></td>
                   <td>
-                    <input type="submit" value="Continue">
+                    <input type="submit" name="ACT" value="Continue">
                     &nbsp; <a href="/main/member?mem={{ mem }}">Cancel</a>
                   </td>
                 </tr>
               </table>
+              {% if show_approval %}
+              <div class="overlay" id="approve">
+                <table border="1" cellpadding="6" cellspacing="0" bgcolor="#ffffcc" width="380" bordercolor="#990000">
+                  <tr bgcolor="#660000">
+                    <td><font color="#ffffff" face="Tahoma" size="2"><b>MEMSYS — Human approval required</b></font></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <font face="Tahoma" size="2">
+                        Unexpected confirmation: a human must approve before posting
+                        new sub-account details. Verify you are human.
+                      </font>
+                      <p>
+                        <input type="submit" name="ACT" value="Approve">
+                        &nbsp;
+                        <a href="/main/subacct?mem={{ mem }}">Cancel</a>
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              {% endif %}
             </form>
           </td>
         </tr>

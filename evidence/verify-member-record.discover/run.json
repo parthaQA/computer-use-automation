@@ -1,0 +1,249 @@
+{
+  "kind": "discover",
+  "name": "open base_url, enter operator id and password, click on sign on button. search member id 99999 and click on search butto",
+  "surface": "web",
+  "tenant_id": "",
+  "run_id": "71c588c0",
+  "state": "FAILED",
+  "result": {
+    "status": "failed",
+    "outputs": {
+      "member_id": "«not stored»",
+      "surface": "«not stored»",
+      "userflow_path": "«not stored»",
+      "evidence_dir": "«not stored»",
+      "detail": "«not stored»",
+      "screen_id": "«not stored»",
+      "screen": "«not stored»",
+      "member_id_entered": "«not stored»",
+      "result_message": "«not stored»",
+      "sub_account_popup_appeared": "«not stored»",
+      "step": "«not stored»",
+      "checkpoint_trail": "«not stored»",
+      "manifest": "«not stored»",
+      "screenshot": "«not stored»",
+      "video": "«not stored»"
+    },
+    "outcome_code": null,
+    "error": {
+      "step": "search_member_id",
+      "expected": "Capture whether member {member_id} was found",
+      "observed": "Signed on with operator x_operator, navigated to Member Inquiry (INQ01), entered member ID 99999, clicked Search. The page displayed message: 'Record not found for membership 99999.' No unexpected popups, overlays, or sub-account approval dialogs appeared during the process."
+    }
+  },
+  "interventions": [],
+  "events": [
+    {
+      "ts": "2026-09-27T08:38:18+00:00",
+      "event": "run_created",
+      "kind": "discover",
+      "name": "«redacted»",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:38:18+00:00",
+      "event": "state_changed",
+      "old": "CREATED",
+      "new": "PREPARING",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:38:18+00:00",
+      "event": "state_changed",
+      "old": "PREPARING",
+      "new": "RUNNING",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:38:18+00:00",
+      "event": "step_started",
+      "step": "open_browser",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:38:18+00:00",
+      "event": "discover_started",
+      "url": "http://127.0.0.1:8000/signon",
+      "prompt": "open base_url, enter operator id and password, click on sign on button. search member id 99999 and click on search button. verify the member record",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:38:18+00:00",
+      "event": "surface_opened",
+      "driver": "playwright",
+      "app": "memsys",
+      "title": "Chromium",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:38:18+00:00",
+      "event": "policy_loaded",
+      "hosts": [
+        "127.0.0.1",
+        "localhost"
+      ],
+      "actions": [
+        "navigate",
+        "click",
+        "change",
+        "keydown",
+        "wait",
+        "scroll",
+        "extract",
+        "screenshot",
+        "done",
+        "ask_human"
+      ],
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:38:19+00:00",
+      "event": "discover_video_armed",
+      "dir": "evidence\\verify-member-record.discover\\pw-video",
+      "cdp": "http://127.0.0.1:60114",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:38:19+00:00",
+      "event": "step_started",
+      "step": "run_task",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:38:27+00:00",
+      "event": "page_action",
+      "actor": "automation",
+      "what": "change OPR = «redacted»",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:38:27+00:00",
+      "event": "page_action",
+      "actor": "automation",
+      "what": "key «redacted» in OPR",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:38:28+00:00",
+      "event": "page_action",
+      "actor": "automation",
+      "what": "change OPR = «redacted»",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:38:28+00:00",
+      "event": "page_action",
+      "actor": "automation",
+      "what": "change PWD = «redacted»",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:38:28+00:00",
+      "event": "page_action",
+      "actor": "automation",
+      "what": "key «redacted» in PWD",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:38:28+00:00",
+      "event": "page_action",
+      "actor": "automation",
+      "what": "change PWD = «redacted»",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:38:29+00:00",
+      "event": "surface_step",
+      "label": "click:0",
+      "driver": "playwright",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:38:36+00:00",
+      "event": "surface_step",
+      "label": "click:0",
+      "driver": "playwright",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:38:44+00:00",
+      "event": "surface_step",
+      "label": "done:0",
+      "driver": "playwright",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:38:44+00:00",
+      "event": "step_started",
+      "step": "save_user_flow",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:38:44+00:00",
+      "event": "user_flow_saved",
+      "path": "workflows\\live_discover.json",
+      "steps": 6,
+      "success": true,
+      "agent_steps": 4,
+      "final": "{\"outcome\": \"not_found\", \"detail\": \"Signed on with operator x_operator, navigated to Member Inquiry (INQ01), entered member ID 99999, clicked Search. The page displayed message: 'Record not found for membership 99999.' No unexpected popups, overlays, or sub-account approval dialogs appeared during the process.\", \"observed\": {\"screen\": \"INQ01 Member Inquiry\", \"member_id_entered\": \"99999\", \"result_message\": \"Record not found for membership 99999.\", \"sub_account_popup_appeared\": \"no\"}, \"screen_id\":",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:38:44+00:00",
+      "event": "checkpoint_state",
+      "screen_id": null,
+      "steps": 0,
+      "trail": [],
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:38:44+00:00",
+      "event": "discover_screenshot",
+      "path": "evidence\\verify-member-record.discover\\screenshot.png",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:38:46+00:00",
+      "event": "discover_video",
+      "path": "evidence\\verify-member-record.discover\\discover.webm",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:38:46+00:00",
+      "event": "state_changed",
+      "old": "RUNNING",
+      "new": "FAILED",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:38:46+00:00",
+      "event": "workflow_finished",
+      "extracted": {
+        "outcome": "failed",
+        "screen_id": "INQ01",
+        "detail": "Signed on with operator x_operator, navigated to Member Inquiry (INQ01), entered member ID 99999, clicked Search. The page displayed message: 'Record not found for membership 99999.' No unexpected popups, overlays, or sub-account approval dialogs appeared during the process.",
+        "observed": {
+          "surface": "web",
+          "evidence_dir": "evidence\\verify-member-record.discover",
+          "screen": "INQ01 Member Inquiry",
+          "member_id_entered": "99999",
+          "result_message": "Record not found for membership 99999.",
+          "sub_account_popup_appeared": "no",
+          "manifest": "evidence\\verify-member-record.discover\\manifest.json",
+          "screenshot": "evidence\\verify-member-record.discover\\screenshot.png",
+          "video": "evidence\\verify-member-record.discover\\discover.webm"
+        },
+        "outcome_code": null,
+        "step": "search_member_id",
+        "expected": "Capture whether member {member_id} was found"
+      },
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:38:46+00:00",
+      "event": "run_finished",
+      "state": "FAILED",
+      "surface": "web"
+    }
+  ]
+}

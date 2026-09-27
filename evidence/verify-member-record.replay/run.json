@@ -1,0 +1,340 @@
+{
+  "kind": "replay",
+  "name": "evidence\\verify-member-record.discover\\verify-member-record.userflow.json",
+  "surface": "web",
+  "tenant_id": "",
+  "run_id": "3bd214df",
+  "state": "BUSINESS_OUTCOME",
+  "result": {
+    "status": "business_outcome",
+    "outputs": {
+      "surface": "«not stored»",
+      "member_id": "«not stored»",
+      "base_url": "«not stored»",
+      "app": "«not stored»",
+      "screen_id": "«not stored»",
+      "detail": "«not stored»",
+      "workflow_path": "«not stored»",
+      "message": "«not stored»",
+      "member_found": "«not stored»",
+      "outcome_code": "«not stored»",
+      "step": "«not stored»",
+      "evidence_dir": "«not stored»",
+      "evidence_manifest": "«not stored»",
+      "workflow_replay": "«not stored»",
+      "video": "«not stored»",
+      "screenshot": "«not stored»",
+      "checkpoint_trail": "«not stored»"
+    },
+    "outcome_code": "MEMBER_NOT_FOUND",
+    "error": null
+  },
+  "interventions": [],
+  "events": [
+    {
+      "ts": "2026-09-27T08:42:09+00:00",
+      "event": "run_created",
+      "kind": "replay",
+      "name": "«redacted»",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:42:09+00:00",
+      "event": "state_changed",
+      "old": "CREATED",
+      "new": "PREPARING",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:42:09+00:00",
+      "event": "state_changed",
+      "old": "PREPARING",
+      "new": "RUNNING",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:42:09+00:00",
+      "event": "step_started",
+      "step": "load_workflow",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:42:09+00:00",
+      "event": "workflow_loaded",
+      "path": "evidence\\verify-member-record.discover\\verify-member-record.userflow.json",
+      "id": "live_discover",
+      "version": 1,
+      "title": "open base_url, enter operator id and password, click on sign on button. search member id {member_id} and click on search button. verify the member record",
+      "default_surface": "web",
+      "surface": "web",
+      "steps": 6,
+      "inputs": [
+        "operator",
+        "password",
+        "member_id"
+      ]
+    },
+    {
+      "ts": "2026-09-27T08:42:09+00:00",
+      "event": "workflow_inputs",
+      "names": [
+        "operator",
+        "password",
+        "member_id"
+      ],
+      "provided": [
+        "operator",
+        "member_id",
+        "base_url",
+        "app"
+      ],
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:42:09+00:00",
+      "event": "step_started",
+      "step": "run_playwright",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:42:09+00:00",
+      "event": "replay_evidence_armed",
+      "dir": "evidence\\verify-member-record.replay",
+      "workflow": "evidence\\verify-member-record.replay\\verify-member-record.replay.json",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:42:10+00:00",
+      "event": "replay_video_armed",
+      "dir": "evidence\\verify-member-record.replay\\pw-video",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:42:10+00:00",
+      "event": "surface_opened",
+      "driver": "playwright",
+      "app": "memsys",
+      "title": "Chromium",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:42:10+00:00",
+      "event": "surface_step",
+      "type": "navigate",
+      "label": "navigate:{base_url}/signon",
+      "locators": [],
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:42:11+00:00",
+      "event": "checkpoint",
+      "n": 1,
+      "step": "navigate:{base_url}/signon",
+      "screen_id": "SON01",
+      "kind": "clear",
+      "ok": true,
+      "detail": "",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:42:11+00:00",
+      "event": "surface_step",
+      "type": "change",
+      "label": "change:{operator}",
+      "locators": [
+        "input[name='OPR'][type='text']",
+        "xpath//html/body/center/table/tbody/tr[2]/td/form/table/tbody/tr[1]/td[2]/input"
+      ],
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:42:11+00:00",
+      "event": "checkpoint",
+      "n": 2,
+      "step": "change:{operator}",
+      "screen_id": "SON01",
+      "kind": "clear",
+      "ok": true,
+      "detail": "",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:42:11+00:00",
+      "event": "surface_step",
+      "type": "change",
+      "label": "change:<secret>x_password</secret>",
+      "locators": [
+        "input[name='PWD'][type='password']",
+        "xpath//html/body/center/table/tbody/tr[2]/td/form/table/tbody/tr[2]/td[2]/input"
+      ],
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:42:12+00:00",
+      "event": "page_action",
+      "actor": "automation",
+      "what": "change OPR = «redacted»",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:42:12+00:00",
+      "event": "checkpoint",
+      "n": 3,
+      "step": "change:<secret>x_password</secret>",
+      "screen_id": "SON01",
+      "kind": "clear",
+      "ok": true,
+      "detail": "",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:42:12+00:00",
+      "event": "surface_step",
+      "type": "click",
+      "label": "click:Sign On",
+      "locators": [
+        "input[type='submit'][value='Sign On']",
+        "xpath//html/body/center/table/tbody/tr[2]/td/form/table/tbody/tr[3]/td[2]/input",
+        "text/Sign On",
+        "[name=\"Sign On\"]"
+      ],
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:42:16+00:00",
+      "event": "checkpoint",
+      "n": 4,
+      "step": "click:Sign On",
+      "screen_id": "INQ01",
+      "kind": "clear",
+      "ok": true,
+      "detail": "",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:42:16+00:00",
+      "event": "surface_step",
+      "type": "change",
+      "label": "change:{member_id}",
+      "locators": [
+        "input[name='MEMID'][type='text']",
+        "xpath//html/body/center/table/tbody/tr[2]/td/table/tbody/tr/td/form/table/tbody/tr/td[2]/input"
+      ],
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:42:20+00:00",
+      "event": "checkpoint",
+      "n": 5,
+      "step": "change:{member_id}",
+      "screen_id": "INQ01",
+      "kind": "clear",
+      "ok": true,
+      "detail": "",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:42:20+00:00",
+      "event": "surface_step",
+      "type": "click",
+      "label": "click:Search",
+      "locators": [
+        "input[type='submit'][value='Search']",
+        "xpath//html/body/center/table/tbody/tr[2]/td/table/tbody/tr/td/form/table/tbody/tr/td[3]/input",
+        "text/Search",
+        "[name=\"Search\"]"
+      ],
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:42:24+00:00",
+      "event": "page_action",
+      "actor": "automation",
+      "what": "change MEMID = 99999",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:42:24+00:00",
+      "event": "page_action",
+      "actor": "automation",
+      "what": "click Search",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:42:29+00:00",
+      "event": "checkpoint",
+      "n": 6,
+      "step": "click:Search",
+      "screen_id": "INQ01",
+      "kind": "business",
+      "ok": true,
+      "detail": "Record not found for membership 99999.",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:42:29+00:00",
+      "event": "replay_screenshot",
+      "path": "evidence\\verify-member-record.replay\\screenshot.png",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:42:30+00:00",
+      "event": "replay_video",
+      "path": "evidence\\verify-member-record.replay\\replay.webm",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:42:30+00:00",
+      "event": "checkpoint_state",
+      "screen_id": "INQ01",
+      "steps": 6,
+      "trail": [
+        "1:navigate:{base_url}/signon:SON01:clear",
+        "2:change:{operator}:SON01:clear",
+        "3:change:<secret>x_password</secret>:SON01:clear",
+        "4:click:Sign On:INQ01:clear",
+        "5:change:{member_id}:INQ01:clear",
+        "6:click:Search:INQ01:business"
+      ],
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:42:30+00:00",
+      "event": "state_changed",
+      "old": "RUNNING",
+      "new": "BUSINESS_OUTCOME",
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:42:30+00:00",
+      "event": "workflow_finished",
+      "extracted": {
+        "outcome": "business_outcome",
+        "screen_id": "INQ01",
+        "detail": "Record not found for membership 99999.",
+        "observed": {
+          "surface": "web",
+          "base_url": "http://127.0.0.1:8000",
+          "app": "desktop:memsys",
+          "message": "Record not found for membership 99999.",
+          "member_found": "false",
+          "evidence_dir": "evidence\\verify-member-record.replay",
+          "evidence_manifest": "evidence\\verify-member-record.replay\\manifest.json",
+          "workflow_replay": "evidence\\verify-member-record.replay\\verify-member-record.replay.json",
+          "video": "evidence\\verify-member-record.replay\\replay.webm",
+          "screenshot": "evidence\\verify-member-record.replay\\screenshot.png"
+        },
+        "outcome_code": "MEMBER_NOT_FOUND",
+        "step": "click:Search",
+        "expected": null
+      },
+      "surface": "web"
+    },
+    {
+      "ts": "2026-09-27T08:42:30+00:00",
+      "event": "run_finished",
+      "state": "BUSINESS_OUTCOME",
+      "surface": "web"
+    }
+  ]
+}

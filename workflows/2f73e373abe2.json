@@ -1,0 +1,79 @@
+{
+  "schema_version": "capability.v1",
+  "id": "2f73e373abe2",
+  "version": 1,
+  "title": "Open base_url. Enter operator id JLEE. Enter password {password}. Click Sign On.",
+  "inputs": [
+    {
+      "name": "password",
+      "type": "string",
+      "required": true,
+      "secret": true,
+      "description": "Operator password from the environment; not stored in the artifact"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "screen_id",
+      "type": "string",
+      "required": false,
+      "secret": false,
+      "description": "MEMSYS screen code at the end"
+    }
+  ],
+  "success": {
+    "description": "Sign on with operator id JLEE",
+    "checks": [],
+    "must_see": [],
+    "must_not_see": []
+  },
+  "steps": [
+    {
+      "type": "navigate",
+      "url": "{base_url}/signon",
+      "how": "open this URL"
+    },
+    {
+      "type": "change",
+      "selectors": [
+        [
+          "input[name='OPR'][type='text']"
+        ],
+        [
+          "xpath//html/body/center/table/tbody/tr[2]/td/form/table/tbody/tr[1]/td[2]/input"
+        ]
+      ],
+      "value": "JLEE",
+      "how": "form name then xpath"
+    },
+    {
+      "type": "change",
+      "selectors": [
+        [
+          "input[name='PWD'][type='password']"
+        ],
+        [
+          "xpath//html/body/center/table/tbody/tr[2]/td/form/table/tbody/tr[2]/td[2]/input"
+        ]
+      ],
+      "value": "<secret>x_password</secret>",
+      "how": "form name then xpath"
+    },
+    {
+      "type": "click",
+      "selectors": [
+        [
+          "input[type='submit'][value='Sign On']"
+        ],
+        [
+          "xpath//html/body/center/table/tbody/tr[2]/td/form/table/tbody/tr[3]/td[2]/input"
+        ],
+        [
+          "text/Sign On"
+        ]
+      ],
+      "assertText": "Sign On",
+      "how": "css then xpath then visible text"
+    }
+  ]
+}

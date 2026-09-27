@@ -1,8 +1,59 @@
-"""Computer-use automation framework.
+"""Shared constants for cuaflow. Import from cua.enums."""
 
-The LLM discovers a path through a UI once. That path compiles to a typed
-capability. Production replay has no model in the decision loop.
-"""
+from .enums import (
+    ActionKind,
+    AppId,
+    ButtonLabel,
+    ConditionKind,
+    Driver,
+    FieldId,
+    FlowId,
+    InputName,
+    InterventionStatus,
+    LabMember,
+    OutcomeCode,
+    PageNeedle,
+    Placeholder,
+    ProductCode,
+    RecordedUrl,
+    RecoveryAction,
+    ResultStatus,
+    ResumeMode,
+    RunKind,
+    RunState,
+    SCHEMA_VERSION,
+    ScreenId,
+    SecretToken,
+    StepType,
+    SurfaceKind,
+    UrlPath,
+)
 
-__all__ = ["__version__"]
-__version__ = "0.1.0"
+__all__ = [
+    "ActionKind",
+    "AppId",
+    "ButtonLabel",
+    "ConditionKind",
+    "Driver",
+    "FieldId",
+    "FlowId",
+    "InputName",
+    "InterventionStatus",
+    "LabMember",
+    "OutcomeCode",
+    "PageNeedle",
+    "Placeholder",
+    "ProductCode",
+    "RecordedUrl",
+    "RecoveryAction",
+    "ResultStatus",
+    "ResumeMode",
+    "RunKind",
+    "RunState",
+    "SCHEMA_VERSION",
+    "ScreenId",
+    "SecretToken",
+    "StepType",
+    "SurfaceKind",
+    "UrlPath",
+]

@@ -1,0 +1,24 @@
+{
+  "run_id": "3bd214df",
+  "kind": "replay",
+  "surface": "web",
+  "llm": false,
+  "live_view": "headed Chrome on this machine",
+  "events": "events.jsonl",
+  "run_log": "run.json",
+  "screenshot": "screenshot.png",
+  "video": "replay.webm",
+  "files": [
+    "checkpoints.json",
+    "events.jsonl",
+    "manifest.json",
+    "replay.webm",
+    "run.json",
+    "screenshot.png",
+    "verify-member-record.replay.json"
+  ],
+  "workflow": "verify-member-record.replay.json",
+  "source_json": "evidence\\verify-member-record.discover\\verify-member-record.userflow.json",
+  "recorder": "playwright record_video_dir",
+  "history": null
+}

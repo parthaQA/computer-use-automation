@@ -1,0 +1,101 @@
+{
+  "title": "Open base_url. Enter operator id JLEE. Enter password {password}. Click Sign On. Enter member id 12345. Click Search. Click Open Sub-Account. Verify the sub-account page opened.",
+  "success": {
+    "description": "Verify the sub-account page opened",
+    "checks": [
+      {
+        "after": "Open Sub-Account",
+        "description": "sub-account page opened",
+        "must_see": ["Open Sub-Account", "Product type"],
+        "screen_id": "SUB03"
+      }
+    ]
+  },
+  "steps": [
+    {
+      "type": "navigate",
+      "url": "{base_url}/signon"
+    },
+    {
+      "type": "change",
+      "selectors": [
+        [
+          "input[name='OPR'][type='text']"
+        ],
+        [
+          "xpath//html/body/center/table/tbody/tr[2]/td/form/table/tbody/tr[1]/td[2]/input"
+        ]
+      ],
+      "value": "JLEE"
+    },
+    {
+      "type": "change",
+      "selectors": [
+        [
+          "input[name='PWD'][type='password']"
+        ],
+        [
+          "xpath//html/body/center/table/tbody/tr[2]/td/form/table/tbody/tr[2]/td[2]/input"
+        ]
+      ],
+      "value": "<secret>x_password</secret>"
+    },
+    {
+      "type": "click",
+      "selectors": [
+        [
+          "input[type='submit'][value='Sign On']"
+        ],
+        [
+          "xpath//html/body/center/table/tbody/tr[2]/td/form/table/tbody/tr[3]/td[2]/input"
+        ],
+        [
+          "text/Sign On"
+        ]
+      ],
+      "assertText": "Sign On"
+    },
+    {
+      "type": "change",
+      "selectors": [
+        [
+          "input[name='MEMID'][type='text']"
+        ],
+        [
+          "xpath//html/body/center/table/tbody/tr[2]/td/table/tbody/tr/td/form/table/tbody/tr/td[2]/input"
+        ]
+      ],
+      "value": "{member_id}"
+    },
+    {
+      "type": "click",
+      "selectors": [
+        [
+          "input[type='submit'][value='Search']"
+        ],
+        [
+          "xpath//html/body/center/table/tbody/tr[2]/td/table/tbody/tr/td/form/table/tbody/tr/td[3]/input"
+        ],
+        [
+          "text/Search"
+        ]
+      ],
+      "assertText": "Search"
+    },
+    {
+      "type": "click",
+      "selectors": [
+        [
+          "input[type='submit'][value='Open Sub-Account']"
+        ],
+        [
+          "xpath//html/body/center/table/tbody/tr[2]/td/form/input[2]"
+        ],
+        [
+          "text/Open Sub-Account"
+        ]
+      ],
+      "assertText": "Open Sub-Account"
+    }
+  ]
+}

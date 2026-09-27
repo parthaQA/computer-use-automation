@@ -1,0 +1,24 @@
+{
+  "run_id": "71c588c0",
+  "kind": "discover",
+  "surface": "web",
+  "llm": true,
+  "live_view": "headed Chrome on this machine",
+  "events": "events.jsonl",
+  "run_log": "run.json",
+  "history": "history.json",
+  "screenshot": "screenshot.png",
+  "video": "discover.webm",
+  "files": [
+    "checkpoints.json",
+    "discover.webm",
+    "events.jsonl",
+    "history.json",
+    "manifest.json",
+    "run.json",
+    "screenshot.png",
+    "verify-member-record.userflow.json"
+  ],
+  "agent_steps": 4,
+  "recorder": "playwright record_video_dir"
+}
